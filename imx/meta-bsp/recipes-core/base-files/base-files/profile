@@ -5,6 +5,14 @@ PATH="/usr/local/bin:/usr/bin:/bin"
 EDITOR="vi"			# needed for packages like cron, git-commit
 test -z "$TERM" && TERM="vt100"	# Basic terminal capab. For screen etc.
 
+export Graphics="xcb"
+export QT_QPA_PLATFORM=$Graphics
+export DISPLAY=:0.0
+export GSTL=gst-launch-1.0
+export PLAYBIN=playbin
+export GPLAY=gplay-1.0
+export GSTINSPECT=gst-inspect-1.0
+
 if [ ! -e /etc/localtime -a ! -e /etc/TZ ]; then
 	TZ="UTC"		# Time Zone. Look at http://theory.uwinnipeg.ca/gnu/glibc/libc_303.html
 				# for an explanation of how to set this to your local timezone.

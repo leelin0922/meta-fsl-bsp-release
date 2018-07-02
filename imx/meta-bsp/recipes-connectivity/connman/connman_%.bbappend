@@ -27,7 +27,7 @@ pkg_postinst_${PN} () {
         if [ -n "$D" ]; then
             OPTS="--root=$D"
         fi
-        systemctl $OPTS mask connman.service
+        systemctl $OPTS unmask connman.service
     fi
 }
 

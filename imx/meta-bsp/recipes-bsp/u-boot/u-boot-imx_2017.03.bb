@@ -10,11 +10,14 @@ DEPENDS_append = "dtc-native"
 LICENSE = "GPLv2+"
 LIC_FILES_CHKSUM = "file://Licenses/gpl-2.0.txt;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
-NXP_REPO_MIRROR ?= "nxp/"
-SRCBRANCH = "${NXP_REPO_MIRROR}imx_v2017.03_4.9.11_1.0.0_ga"
-UBOOT_SRC ?= "git://source.codeaurora.org/external/imx/uboot-imx.git;protocol=https"
+#SRCBRANCH = "imx_v2017.03_4.9.11_1.0.0_ga"
+#UBOOT_SRC ?= "git://git.freescale.com/imx/uboot-imx.git;protocol=git"
+#SRC_URI = "${UBOOT_SRC};branch=${SRCBRANCH}"
+#SRCREV = "a2fea67d3eb3092f19f250d53a4a27fa1a0c815f"
+SRCBRANCH = "SBC-7112S_Linux_Uboot-v2017.03"
+UBOOT_SRC ?= "git://github.com/AplexOS/U-Boot.git;protocol=git"
 SRC_URI = "${UBOOT_SRC};branch=${SRCBRANCH}"
-SRCREV = "a2fea67d3eb3092f19f250d53a4a27fa1a0c815f"
+SRCREV = "830fe20044a8ea38c909ac6d977677e860137d63"
 
 S = "${WORKDIR}/git"
 

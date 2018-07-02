@@ -12,3 +12,13 @@ RDEPENDS_${PN}_remove = "qtquick1-dev \
 RDEPENDS_${PN}_append = " \
     qtdeclarative-tools \
 "
+
+USE_WEBENGINE = " \
+    qtwebengine-dev \
+    qtwebengine-mkspecs \
+    qtwebengine \
+"
+
+RDEPENDS_${PN} += " \
+    ${USE_WEBENGINE} \
+"

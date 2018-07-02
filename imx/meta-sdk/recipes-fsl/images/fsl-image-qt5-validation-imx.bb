@@ -37,7 +37,10 @@ QT5_IMAGE_INSTALL_imxgpu3d = " \
     gstreamer1.0-plugins-bad-qt"
 
 # Add packagegroup-qt5-webengine to QT5_IMAGE_INSTALL_mx6 and comment out the line below to install qtwebengine to the rootfs.
-QT5_IMAGE_INSTALL_remove = " packagegroup-qt5-webengine"
+#QT5_IMAGE_INSTALL_remove = " packagegroup-qt5-webengine"
+
+QT5_IMAGE_INSTALL_remove += "packagegroup-qt5-demos"
+QT5_IMAGE_INSTALL_remove += "qtbase-examples"
 
 IMAGE_INSTALL += " \
 ${QT5_IMAGE_INSTALL} \
