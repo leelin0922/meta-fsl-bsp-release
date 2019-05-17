@@ -19,9 +19,7 @@ IMAGE_FEATURES += " \
     debug-tweaks \
     tools-profile \
     splash \
-    nfs-server \
     tools-debug \
-    ssh-server-dropbear \
     tools-testapps \
     hwcodecs \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', '', \
@@ -33,8 +31,6 @@ ERPC_COMPS_append_mx7ulp = "packagegroup-imx-erpc"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-core-full-cmdline \
-    packagegroup-tools-bluetooth \
-    packagegroup-fsl-tools-audio \
     packagegroup-fsl-tools-gpu \
     packagegroup-fsl-tools-gpu-external \
     packagegroup-fsl-tools-testapps \
